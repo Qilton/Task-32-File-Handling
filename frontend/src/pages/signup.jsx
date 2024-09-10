@@ -14,7 +14,7 @@ const HandleSignup=async(e) => {
     return handleError('name,email and pass are required')
   }
   try {
-    const url="http://localhost:8080/auth/save"
+    const url="https://task-32-file-handling-server.vercel.app/auth/save"
     const response= await fetch(url,{
         method:"POST",
         headers:{

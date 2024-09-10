@@ -23,7 +23,7 @@ const Home = () => {
 
   const getUsers = async () => {
     try {
-      const url = "http://localhost:8080/product/get";
+      const url = "https://task-32-file-handling-server.vercel.app/product/get";
       const options = {
         method: "GET",
         headers: {
