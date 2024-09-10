@@ -12,7 +12,17 @@ app.get('/',(req,res) => {
   res.send("Hello World")
 }
 )
-
+const websites = [
+  "localhost:3000",
+  ];
+app.use(
+  cors({
+  origin: websites,
+  methods: "GET,POST,PUT,DELETE,OPTIONS",
+  credentials: true,
+  allowedHeaders: "Content-Type,Authorization",
+  })
+  );
 app.use(bodyParser.json())
 app.use(cors())
 app.use('/auth',AuthRouter)
