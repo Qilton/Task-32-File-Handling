@@ -13,7 +13,7 @@ app.get('/',(req,res) => {
 }
 )
 const websites = [
-  "localhost:3000",
+  "localhost:8080",
   ];
 app.use(
   cors({
