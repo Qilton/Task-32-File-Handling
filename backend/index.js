@@ -12,16 +12,9 @@ app.get('/',(req,res) => {
   res.send("Hello World")
 }
 )
-const websites = [
-  "localhost:8080",
-  ];
+
 app.use(
-  cors({
-  origin: websites,
-  methods: "GET,POST,PUT,DELETE,OPTIONS",
-  credentials: true,
-  allowedHeaders: "Content-Type,Authorization",
-  })
+  cors()
   );
 app.use(bodyParser.json())
 app.use(cors())
